@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+
+            *{
+                background-color: #ffb3c1 ;
+            }
+            
+.divShell{
+    background-color: antiquewhite;
+  }
+  
+  H1{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  form{
+    border-radius: 25px;
+    background-color: #590d22;
+    align-self: center;
+    color: brown;
+    margin: 6px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .loanBlock{
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #590d22;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .aprBlock{
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #590d22;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .tenureBlock{
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #590d22;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .buttonBlock{
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right:20px;
+    background-color: #590d22;
+  }
+  
+  button {
+    position: relative;
+    bottom: 25%;
+    background-color: #590d22;
+    color: white;
+    padding: 20px;
+    margin-left: 640px;
+    font-size: 20px;
+}
+  
+  #EMICapt{
+  
+    border-radius: 10px;
+    background-color:#590d22;
+    color: #590d22;
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+  }
+        </style>
+    </head>
+    <body>
+        <div class="outerShell">
+            <H1>EMI Calculator</H1>
+            <form name="loan-form" onsubmit="return calculator()">
+            <div class='loanBlock'>
+             Loan Amount<br>
+             <input type=number id="amount" style="border-radius:5px; padding: 20px; font-size: 20px;"><br>
+            </div>
+             <div class='aprBlock'>
+             Annual Percent Rate<br>
+             <input type="number" name="apr" id="apr" style="border-radius:5px; padding: 20px; font-size: 20px"><br>
+             </div>
+              <div class='tenureBlock'>
+             Years<br>
+             <input type=number name="tenure" id="tenure" style="border-radius:5px; padding: 20px; font-size: 20px"><br>
+             <br>
+              </div>
+              <div id=buttonBlock>
+            <button style="border-radius:2px">RESULT</button>
+              </div>
+            </form>
+            <P id="EMICapt"></P>
+            <script>
+                 function calculator() {
+        const loanstruct = {
+        loanAmount:document.getElementById("amount").value,
+        annualInterestrate:document.getElementById("apr").value,
+        loanDuration:document.getElementById("tenure").value
+        };
+      // Passing the object as the arguement. The function also returns an object that includes both EMI & Total
+      console.log(loanstruct)
+      function EMIVal2(loan){
+          interest = loan.annualInterestrate/1200;
+          let term = loan.loanDuration*12;
+          let top = Math.pow((1+interest),term);
+          let bottom = top - 1;
+          let ratio = top/bottom;
+          EMI = loan.loanAmount * interest * ratio;
+          Total = EMI*term;
+          const EMIObj = {
+            EMI:EMI.toFixed(0),
+            Total:Total.toFixed(0)
+            };
+          return EMIObj
+      }
+      console.log(EMIVal2(loanstruct));
+      document.getElementById("EMICapt").innerHTML='<P><b>EMI: Rs. </b>' + EMIVal2(loanstruct).EMI + '<br>' + '<b> Total: Rs. </b>' + EMIVal2(loanstruct).Total +'</P>';
+
+      return false
+    }
+            </script>
+          </div>
+    </body>
+</html>
