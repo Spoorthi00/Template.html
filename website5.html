@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DigiGro</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #osh {
+
+            background-repeat: no-repeat;
+            float: right;
+        }
+
+
+
+        .navbar {
+            padding: 0;
+
+        }
+
+        .nav-item:hover {
+            opacity: 0.1;
+            background-color: lightgray;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+
+        }
+
+
+
+
+        #osh {
+            background-repeat: no-repeat;
+            float: right;
+            margin-left: 76rem;
+            z-index: -1;
+            position: absolute;
+            opacity: 0.4;
+        }
+
+        .combo {
+            z-index: 1;
+            position: absolute;
+            margin: 304px 0px 0px 915px;
+            width: 25rem;
+            font-family: "Fira Sans";
+        }
+
+
+        .grab {
+            margin: -120px 0px 70px 1135px;
+            width: 180px;
+            height: 61px;
+            border-radius: 30px;
+            filter: drop-shadow(2.5px 4.33px 5px rgba(1, 1, 1, 0.15));
+            background-image: linear-gradient(0deg, #f76111 0%, #ff0000 100%);
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            font-family: "Fira Sans";
+        }
+
+        .grab:hover {
+            opacity: 0.5;
+            background-color: darkorange;
+
+        }
+
+        .card {
+            width: 400px;
+            height: 130px;
+            border-radius: 8px;
+            filter: drop-shadow(0px 18px 13.5px rgba(255, 197, 115, 0.25));
+            background-image: linear-gradient(0deg, #ffc893 0%, #fff9f3 100%);
+            border: 1px solid #ffddc2;
+            font-family: "Fira Sans";
+            text-transform: uppercase;
+        }
+
+        .card-img {
+            margin-left: 26px;
+            margin-top: 5px;
+            width: 100px;
+        }
+
+        #delivery {
+            width: 150px;
+            height: 150px;
+            margin: -20px 0px 0px 25px;
+        }
+
+        .card-body {
+            width: 188px;
+            font-weight: 600;
+        }
+
+        .cart-title {
+            color: #da2e2e;
+            font-weight: 600;
+        }
+
+        .card-text {
+            margin-left: -42px;
+            font-size: px;
+        }
+
+        #pink {
+            width: 1631px;
+            margin-left: -124px;
+            height: 600px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        #ribbon {
+            width: 500px;
+            height: 700px;
+            margin: -50px 0px 0px -30px;
+            border-radius: 20px;
+            opacity: 0.9;
+        }
+
+        .checkmark {
+            width: 30px;
+        }
+
+        p {
+            font-family: "Fira Sans";
+        }
+
+        .pytho2 {
+            width: 250px;
+            font-size: 34px;
+            line-height: 42px;
+            color: #363636;
+            font-family: "F ON TS PR IN GD EM O";
+        }
+
+        h6 {
+            font-size: 34px;
+            line-height: 42px;
+            color: #363636;
+            font-family: "F ON TS PR IN GD EM O";
+        }
+
+        #shop {
+            width: 180px;
+            height: 61px;
+            border-radius: 30px;
+            filter: drop-shadow(2.5px 4.33px 5px rgba(1, 1, 1, 0.15));
+            background-image: linear-gradient(0deg, #960d0d 0%, #d92d2d 100%);
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            z-index: 1;
+            position: absolute;
+            color: white;
+            margin: 570px 0px 0px 770px;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 600;
+            font-family: "Fira Sans";
+            text-align: center;
+        }
+
+        #white {
+            z-index: -1;
+            position: absolute;
+            height: 400px;
+            opacity: 0.5;
+            margin-top: -51px;
+
+
+        }
+
+        #follow {
+            font-weight: 200;
+            font-size: 34px;
+            line-height: 32px;
+            color: #363636;
+            font-family: "F ON TS PR IN GD EM O";
+            text-align: center;
+        }
+
+        #youtube {
+            font-weight: 200;
+            font-size: 65px;
+            line-height: 50px;
+            color: #363636;
+            font-family: "F ON TS PR IN GD EM O";
+        }
+
+        #video {
+            width: 800px;
+            height: 350px px;
+            z-index: 1;
+            position: absolute;
+            margin: 160px 0px 0px 370px;
+        }
+
+        .result {
+            margin: 370px 10px 10px 10px;
+            font-size: 51px;
+            font-weight: 200;
+            font-size: 64px;
+            line-height: 59px;
+            color: #363636;
+            font-family: "F ON TS PR IN GD EM O";
+            text-align: center;
+
+        }
+
+        .discount {
+
+
+            font-size: 35px;
+            line-height: 32px;
+            color: #009846;
+            font-weight: 400;
+            font-style: italic;
+            font-family: "Fira Sans";
+            text-align: center;
+
+        }
+
+        .today {
+            margin: 0px 0px 0px 580px;
+            width: 215px;
+            height: 61px;
+            border-radius: 30px;
+            filter: drop-shadow(2.5px 4.33px 5px rgba(1, 1, 1, 0.15));
+            background-image: linear-gradient(0deg, #960d0d 0%, #d92d2d 100%);
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            line-height: 36px;
+            color: #ffffff;
+            font-weight: 600;
+            font-family: "Fira Sans";
+            text-align: center;
+        }
+
+        #grad1 {
+            opacity: 0.502;
+            margin-top: -30px;
+            z-index: -1;
+            position: absolute;
+            height: 550px;
+            background-color: red;
+            background-image: url(img/purple.png);
+            background: linear-gradient(10deg, purple, darkred, darkred, #bf3100, #bf3100, white);
+
+        }
+
+        #herbal {
+            width: 200px;
+            margin: 20px 0px 0px 670px;
+
+
+        }
+
+        .beauty {
+            margin-top: 50px;
+            width: 750px;
+            margin-left: 360px;
+            width: 903px;
+            height: 61px;
+            font-size: 24px;
+            line-height: 36px;
+            color: #ffffff;
+            font-weight: 600;
+            font-family: "Fira Sans";
+            text-align: center;
+        }
+
+        #lastline {
+            width: 366px;
+            margin-left: 560px;
+            border-top: 3px solid white;
+            margin-top: 50px;
+
+        }
+
+        #lastline2 {
+            width: 366px;
+            margin-left: 560px;
+            border-top: 3px solid white;
+            margin-top: -32px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 520px;
+
+        }
+
+        .whatsapp {
+            float: left;
+        }
+
+        .whatsapp a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .whatsapp a:hover {
+            background-color: lightgrey;
+            opacity: 1.2;
+
+        }
+
+        .call {
+
+
+            height: 50px;
+            border-radius: 16px;
+            border-color: orange;
+            background-color: orange;
+            margin: 82px 0px 0px -300px;
+            font-size: 28px;
+            line-height: 36px;
+            color: #ffffff;
+            font-weight: 400;
+            font-family: "Fira Sans"; 
+            text-align: center;
+            
+        }
+
+
+
+        .refund {
+
+            margin-left: 320px;
+            margin-top: 45px;
+            opacity: 0.702;
+            width: 600px;
+            height: 25px;
+            font-size: 20px;
+            line-height: 36px;
+            color: #efe3df;
+            font-weight: 400;
+            font-family: "fira Sans";
+            text-align: center;
+        }
+
+
+        #footer {
+            background-image: linear-gradient(0deg, #8b231d 0%, #c2271e 100%);
+            margin-top: 518px;
+            font-size: 20px;
+            line-height: 36px;
+            color: #bb6a65;
+            font-weight: 400;
+            font-family: "Fira Sans";
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg">
+        <a href="" class="navbar-brand fs-1 ms-5  oshea"><img src="img/oshea.png" width="200px"
+                style="margin-left: 80px;"></a>
+        <img src="img/zigzag.png" id="osh" width="300px" height="100px">
+
+
+        <button class="navbar-toggler me-5 " type="button" data-bs-toggler="collapse" data-bs-target="#btn"><i
+                class='bx bx-menu bx-md'></i></button>
+        <div class="collapse navbar-collapse ul-bg " id="btn">
+            <ul class="navbar-nav  ms-auto you">
+                <li class="nav-item">
+                    <a href="#" class="nav-link mx-1 fs-5"><img src="img/001-facebook.png" width="30px" height="30px"
+                            alt="facebook"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link mx-1 fs-5"><img src="img/005-instagram.png" width="30px" height="30px"
+                            alt="instagram"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link mx-1 fs-5"><img src="img/004-youtube.png" width="30px" height="30px"
+                            alt="youtube"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link mx-1 fs-5"><img src="img/007-whatsapp.png" width="30px" height="30px"
+                            alt="whatsapp"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row ">
+            <img src="img/phytowash.png" width="1507" id="pytho">
+            <p class="combo">Purchase a combo of Phyto Light day cream & Phyto Night cream and get a Phyto Luxury
+                FaceWash
+                <b>ABSOLUTELY FREE*!</b>
+            </p>
+            <button class="grab">Grab it today</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row ">
+            <div class="col ">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/delivery.png" alt="delivery" class="card-img" id="delivery">
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="cart-title "><b>FREE</b></h5>
+                                <p class="card-text"><b>SHIPPING ACROSS INDIA</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/free.png" alt="free" class="card-img">
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+
+                                <p class="card-text"><b>Get Phytoluxury
+                                        Facewash</b></p>
+                                <h5 class="cart-title"><b>FREE</b></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <img src="img/voucher.png" alt="voucher" class="card-img">
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="cart-title"><b>Get ₹100</b> </h5>
+                                <p class="card-text"><b>Coupon code for
+                                        next purchase</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/pinkbg.png" id="pink">
+                <button id="shop">Shop now</button>
+                <img src="img/ribbon.png" id="ribbon">
+
+            </div>
+            <div class="col-md-4  ">
+                <p class="pytho2">PhytoLight Multipurpose Cream</p>
+                <h6><b>Benefits:</b></h6>
+                <hr style="width: 100px;">
+                <br>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Lightens and brightens skin</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Repairs pigmentation</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Relieves dark circles</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Minimizes fine lines</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Rejuvenates and nourishes skin.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Slows down and prevents the signs of
+                    aging.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Maintains hydration levels</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark"> Improves uneven skin tone</p>
+
+
+
+
+            </div>
+
+            <div class="col-md-4 ">
+                <p class="pytho">The PhytoAge Night Cream</p>
+                <h6><b>Benefits:</b></h6>
+                <hr style="width: 100px;">
+                <br>
+
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">It is a skin quencher that deeply hydrates
+                    the skin.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">It leaves the skin looking visibly
+                    energized with a youthful appearance. </p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Controls acne and pimples and reduces the
+                    appearance of pores.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Brightens dull skin.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Smooths rough skin.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Protects from UVA/UVB rays.</p>
+                <p><img src="img/checkmark.png" alt="check" class="checkmark">Reduces fine lines and wrinkles.</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <img src="img/whitebg.png" id="white">
+            <span class="text-center" id="follow">Follow Us On</span>
+            <span class="text-center" id="youtube"><b>YouTube</b></span>
+            <br>
+            <hr style="width: 150px; margin-left: 689px; margin-top: 10px; ">
+            <img src="img/video.png" id="video">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="text-center result"><b>Get one today and see instant results</b></div>
+        <div class="text-center discount"><b><i>Limited Time Offer. Hurry Up!</i></b></div>
+        <br>
+        <button class="today">Grab it today</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="grad1">
+                <img src="img/oshea2.png" alt="oshea" id="herbal">
+                <br>
+                <p class="text-center beauty ">Oshea Herbals is committed to providing premium herbal beauty and
+                    personal
+                    care products. Oshea Herbals
+                    products are 100% cruelty-free.</p>
+                <hr id="lastline">
+                <div class="container  ">
+                    <ul class="social">
+                        <li class="whatsapp">
+                            <a href="#"></a><img src="img/001-facebook.png" width="30px" height="30px" alt="facebook"
+                                style="margin-top: -30px;
+                        margin-left: -15px;"></a>
+                        </li>
+                        <li class="whatsapp">
+                            <a href="#"><img src="img/005-instagram.png" width="30px" height="30px" alt="instagram"></a>
+                        </li>
+                        <li class="whatsapp">
+                            <a href="#"><img src="img/004-youtube.png" width="30px" height="30px" alt="youtube"></a>
+                        </li>
+                        <li class="whatsapp">
+                            <a href="#"><img src="img/007-whatsapp.png" width="30px" height="30px" alt="whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="text-center call">Call Us On: +91 33 4043 3333</button>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+                <hr id="lastline2">
+                <div class="container">
+                    <div class="row refund">
+                        <div class="col-md-4">
+                            <div style="margin-left: 40px;">Refund Policy | </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div>Terms & Conditions |</div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <span>Privacy Policy</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p class="text-center">© 2022 OJB Herbals Pvt Ltd. All Rights Reserved. | Designed by DigiGro</p>
+    </footer>
+    <script src="" async defer></script>
+</body>
+
+</html>
