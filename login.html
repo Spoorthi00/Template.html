@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Manya Technosys</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/bccad437a0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        section .imgBx {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            margin-top: -50px;
+        }
+
+        section .imgBx::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(225deg, #e91e63, #03a9f4);
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+
+        section .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        section .contentBx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+
+        section .contentBx .formBx {
+            width: 50%;
+
+        }
+
+        section .contentBx .formBx .login {
+            color: #607d8b;
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #ff4584;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        section .contentBx .formBx .inputBx {
+            margin-bottom: 20px;
+        }
+
+        section .contentBx .formBx .inputBx #email {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        section .contentBx .formBx .inputBx #pass {
+            width: 100%;
+            padding: 10px 20px;
+            outline: none;
+            font-weight: 400;
+            border: 1px solid #607d8b;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #607d8b;
+            background: transparent;
+            border-radius: 30px;
+        }
+
+        section .contentBx .formBx .inputBx #pass[type="submit"] {
+            background: #ff4584;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+
+        }
+
+        section .contentBx .formBx .inputBx #pass[type="submit"]:hover {
+            background: #f53677;
+        }
+
+        section .contentBx .formBx .remember {
+            margin-bottom: 10px;
+            color: #607d8b;
+            font-weight: 400;
+            font-size: 14px;
+
+        }
+
+        section .contentBx .formBx .inputBx #acc {
+            color: #607d8b;
+        }
+
+        section .contentBx .formBx .inputBx #sign {
+            color: #ff4584;
+        }
+
+        section .contentBx .formBx #social {
+            color: black;
+            text-align: center;
+            margin: 30px 0 10px;
+            font-weight: 500;
+        }
+
+        section .contentBx .formBx .sci {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white
+        }
+
+        section .contentBx .formBx .sci #brands {
+            list-style: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #607d8b;
+            border-radius: 50%;
+            margin: 0 7px;
+            cursor: pointer;
+        }
+
+        section .contentBx .formBx .sci #brands:hover {
+            background: #ff4584;
+        }
+
+        section .contentBx .formBx .sci #brands img {
+            transform: scale(0, 5);
+            filter: invert(1);
+
+        }
+
+        #ootps {
+            height: 100vh;
+            background: #000000;
+            background: -webkit-linear-gradient(to right #434343, #000000);
+            background: linear-gradient(to right, #434343, #000000);
+            margin-top: 60px;
+
+
+        }
+
+
+
+
+        @media(max-width:768px) {
+            section .imgBx {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            section .contentBx {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            section .contentBx .formBx {
+                width: 100%;
+                padding: 40px;
+                background: rgb(255 255 221 / 90%);
+                margin: 50px;
+            }
+
+            section .contentBx .formBx #social {
+                color: black;
+                text-align: center;
+                margin: 30px 0 10px;
+
+            }
+        }
+
+        #ootps {
+            height: 100vh;
+            background: #000000;
+            background: -webkit-linear-gradient(to right #434343, #000000);
+            background: linear-gradient(to right, #434343, #000000);
+
+
+
+        }
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            justify-content: center;
+            align-items: space-around;
+
+        }
+
+        .userInput {
+            display: flex;
+            justify-content: center;
+        }
+
+        #enter {
+            text-align: center;
+            font-family: arimo;
+            color: honeydew;
+
+        }
+
+        #ootps {
+            height: 100vh;
+            background: #000000;
+            background: -webkit-linear-gradient(to right #434343, #000000);
+            background: linear-gradient(to right, #434343, #000000);
+            margin-top: 127px;
+
+
+
+        }
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            justify-content: center;
+            align-items: space-around;
+
+        }
+
+        .userInput {
+            display: flex;
+            justify-content: center;
+        }
+
+        #enter {
+            text-align: center;
+            font-family: arimo;
+            color: honeydew;
+
+        }
+
+
+
+        .confirm {
+            width: 150px;
+            height: 40px;
+            margin: 25px auto 0px auto;
+            font-family: arimo;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            background: #000000;
+            background: -webkit-linear-gradient(to right, #9bc5c3, #616161);
+            background: linear-gradient(to right, #9bc5c3, #616161);
+        }
+
+        .otp {
+            margin: 10px;
+            height: 35px;
+            width: 65px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-family: arimo;
+            font-size: 1.1rem;
+            background: #eef2f3;
+
+        }
+
+        .confirm {
+            width: 150px;
+            height: 40px;
+            margin: 25px auto 0px auto;
+            font-family: arimo;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            background: #000000;
+            background: -webkit-linear-gradient(to right, #9bc5c3, #616161);
+            background: linear-gradient(to right, #9bc5c3, #616161);
+        }
+
+        .tab {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: -webkit-linear-gradient(to right, #9bc5c3, #616161);
+            background: linear-gradient(to right, #9bc5c3, #616161);
+
+        }
+
+        table {
+            font-family: sans-serif;
+            border-collapse: collapse;
+
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        th:hover {
+            opacity: 0.7;
+            background-color: #333;
+            color: #fff;
+        }
+
+        th,
+        td {
+            padding: .8rem;
+            font-size: 1.4rem;
+        }
+
+        tbody {
+            background-color: #eee;
+            color: #555;
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+            thead {
+                display: none;
+            }
+
+            td {
+                display: block;
+            }
+
+            td:first-child {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+            }
+
+            td:nth-child(2)::before {
+                content: "Joining Date";
+            }
+
+            td:nth-child(3)::before {
+                content: "Age";
+            }
+
+            td:nth-child(4)::before {
+                content: "Gender";
+            }
+
+            td:nth-child(5)::before {
+                content: "Designation";
+            }
+
+            td {
+                text-align: right;
+            }
+
+            td::before {
+                float: left;
+                margin-right: 3rem;
+                font-weight: bold;
+            }
+        }
+
+        #ootps {
+            height: 100vh;
+            background: #000000;
+            background: -webkit-linear-gradient(to right #434343, #000000);
+            background: linear-gradient(to right, #434343, #000000);
+
+
+
+
+        }
+
+        table {
+            font-family: sans-serif;
+            border-collapse: collapse;
+            margin-top: 80px;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            justify-content: center;
+            align-items: space-around;
+
+        }
+
+        .userInput {
+            display: flex;
+            justify-content: center;
+        }
+
+        #enter {
+            text-align: center;
+            font-family: arimo;
+            color: honeydew;
+
+        }
+
+        .otp {
+            margin: 10px;
+            height: 35px;
+            width: 65px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-family: arimo;
+            font-size: 1.1rem;
+            background: #eef2f3;
+
+        }
+
+
+
+        .confirm {
+            width: 150px;
+            height: 40px;
+            margin: 25px auto 0px auto;
+            font-family: arimo;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            background: #000000;
+            background: -webkit-linear-gradient(to right, #9bc5c3, #616161);
+            background: linear-gradient(to right, #9bc5c3, #616161);
+        }
+
+        #employee {
+            color: #eee;
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 320px;
+            border-bottom: 4px solid #ff4584;
+            display: inline-block;
+            letter-spacing: 1px;
+            z-index: 1;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <section>
+        <div class="imgBx">
+            <img src="img/devices.jpg">
+
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2 class="login">Login</h2>
+                <form>
+                    <div class="inputBx">
+                        <span id="email">Email ID</span>
+                        <input id="pass" type="text" name="">
+                    </div>
+                    <div class="inputBx">
+                        <span id="email">Password</span>
+                        <input id="pass" type="password" name="">
+                    </div>
+                    <div class="remember">
+                        <label>
+                            <input id="pass" type="checkbox" name="">Remember me</label>
+                    </div>
+                    <div class="inputBx">
+
+                        <input id="pass" type="submit" value="Sign In" name="">
+
+                    </div>
+                    <div class="inputBx">
+                        <p id="acc">Don't Have an account? <a href="#" id="sign">Sign up</a></p>
+                    </div>
+                </form>
+                <h3 id="social">Login with social media</h3>
+                <ul class="sci">
+                    <li id="brands"><i class="fa-brands fa-facebook"></i></li>
+                    <li id="brands"><i class="fa-brands fa-twitter"></i></li>
+                    <li id="brands"><i class="fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="container" id="ootps">
+        <h1 id="enter">ENTER OTP</h1>
+
+        <div class="userInput">
+            <input type="text" maxlength="1" class="otp" id="ist" onkeyup="clickEvent(this,'sec')">
+            <input type="text" maxlength="1" class="otp" id="sec" onkeyup="clickEvent(this,'third')">
+            <input type="text" maxlength="1" class="otp" id="third" onkeyup="clickEvent(this,'fourth')">
+            <input type="text" maxlength="1" class="otp" id="fourth" onkeyup="clickEvent(this,'ist')">
+        </div>
+        <button class="confirm">Confirm</button>
+    </div>
+
+
+    <section class="tab">
+        <h1 id="employee">Employees</h1>
+        <table>
+            <thead>
+                <tr>
+
+                    <th>Name</th>
+                    <th>Joining Date</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Designation</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pooja</td>
+                    <td>12/10/2019</td>
+                    <td>30</td>
+                    <td>Female</td>
+                    <td>Trainer</td>
+
+                </tr>
+                <tr>
+                    <td>Megha</td>
+                    <td>03/03/2017</td>
+                    <td>29</td>
+                    <td>Female</td>
+                    <td>Quality Engineer</td>
+
+
+                </tr>
+                <tr>
+                    <td>Mayur</td>
+                    <td>17/06/2021</td>
+                    <td>27</td>
+                    <td>Male</td>
+                    <td>Developer</td>
+
+                </tr>
+                <tr>
+                    <td>Irfan</td>
+                    <td>27/09/2020</td>
+                    <td>29</td>
+                    <td>Male</td>
+                    <td>Sevice Desk</td>
+
+                </tr>
+                <tr>
+                    <td>Vinoda</td>
+                    <td>03/03/2018</td>
+                    <td>31</td>
+                    <td>Female</td>
+                    <td>HR</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script type="text/javascript">
+        function clickEvent(first, last) {
+            if (first.value.length) {
+                document.getElementById(last).focus();
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
